@@ -86,7 +86,8 @@ workon mopidy
 
 inform "Verifying python $PYTHON_MAJOR_VERSION.x version"
 PIP_CHECK="$PIP_BIN --version"
-VERSION=$($PIP_CHECK | sed 's/^.*\(python[\ ]*//' | sed 's/.$//')
+VERSION=$($PIP_BIN --version | grep -oP '(?<=python )\d+\.\d+')
+MAJOR_VERSION=$(echo "$VERSION" | cut -d. -f1)
 RESULT=$?
 if [ "$RESULT" == "0" ]; then
     MAJOR_VERSION=$(echo "$VERSION" | awk -F. '{print $1}')
