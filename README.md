@@ -1,4 +1,4 @@
-# Pirate Radio (Trixie / Debian 13 compatible)
+# Pirate Audio (Trixie / Debian 13 compatible)
 
 This is a community-maintained fork of [pimoroni/pirate-audio](https://github.com/pimoroni/pirate-audio), updated for compatibility with **Raspberry Pi OS Trixie (Debian 13)** and **kernel 6.x**.
 
