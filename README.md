@@ -2,7 +2,7 @@
 
 This is a community-maintained fork of [pimoroni/pirate-audio](https://github.com/pimoroni/pirate-audio), updated for compatibility with **Raspberry Pi OS Trixie (Debian 13)** and **kernel 6.x**.
 
-Assumes user 'pi'.
+Assumes user 'pi'. Only tested on the pre 5/2025 lineout hat version. 
 
 ## What changed from upstream
 
