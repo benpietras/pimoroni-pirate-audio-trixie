@@ -1,0 +1,18 @@
+[Unit]
+Description=Mopidy music server
+After=avahi-daemon.service
+After=dbus.service
+After=network-online.target
+Wants=network-online.target
+After=nss-lookup.target
+After=pulseaudio.service
+After=remote-fs.target
+After=sound.target
+
+[Service]
+WorkingDirectory=%h
+ExecStart=%h/.virtualenvs/mopidy/bin/mopidy --config %h/.config/mopidy/defaults.conf:%h/.config/mopidy/mopidy.conf
+ExecStartPost=/bin/bash -c 'sleep 10 && %h/autoplay.sh'
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Mopidy stream watchdog
+After=mopidy.service
+Requires=mopidy.service
+
+[Service]
+WorkingDirectory=%h
+ExecStart=%h/watchdog.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
