@@ -4,6 +4,9 @@ This is a community-maintained fork of [pimoroni/pirate-audio](https://github.co
 
 Assumes user 'pi'. Only tested on the pre 5/2025 lineout hat version. 
 
+At the end:
+sudo loginctl enable-linger pi
+
 ## What changed from upstream
 
 | Issue | Old | New |
